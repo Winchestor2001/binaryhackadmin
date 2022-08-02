@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Users page
+{% endblock %}
+
+
+{% block content %}
+<a href="/users" class="btn btn-primary refreshBtn w-25">Refresh</a>
+<div class="container my-5 py-2">
+    {% if users %}
+        {% for user in users %}
+        <div class="alert alert-primary" role="alert">
+            {{ user.id }}) <strong>Login</strong>: {{ user.user_name }} <strong>Password</strong>: {{ user.user_password }} <strong>Status</strong>: {{ user.user_status }}
+            <a href="/edit/{{ user.id }}/up" class="btn btn-success myBtn1">Up</a>
+            <a href="/edit/{{ user.id }}/error" class="btn btn-warning myBtn4">Error</a>
+            <a href="/edit/{{ user.id }}/down" class="btn btn-danger myBtn2">Down</a>
+            <a href="/edit/{{ user.id }}/del" class="btn btn-dark myBtn3">Delete</a>
+        </div>
+        {% endfor %}
+    {% else %}
+        <div class="alert alert-warning" role="alert">
+            <h5>База пуст :(</h5>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

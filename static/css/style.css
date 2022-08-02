@@ -1,0 +1,23 @@
+
+.myBtn1, .myBtn2, .myBtn3, .myBtn4{
+    position: absolute;
+    bottom: 8px;
+}
+.refreshBtn{
+    position: absolute;
+    right: 150px;
+    top: 65px;
+}
+
+.myBtn1{
+    right: 300px;
+}
+.myBtn2{
+    right: 200px;
+}
+.myBtn3{
+    right: 100px;
+}
+.myBtn4{
+    right: 10px;
+}
